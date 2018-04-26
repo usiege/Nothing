@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 
+@available(iOS 9.0, *)
 class GameScene: SKScene {
     
     var entities = [GKEntity]()
@@ -70,7 +71,11 @@ class GameScene: SKScene {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+            if #available(iOS 9.0, *) {
+                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+            } else {
+                // Fallback on earlier versions
+            }
         }
         
         for t in touches { self.touchDown(atPoint: t.location(in: self)) }

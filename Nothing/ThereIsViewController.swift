@@ -10,15 +10,30 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class ThereIsViewController: UIViewController {
 
+    public lazy var noLabel: UILabel = {
+        let no = UILabel()
+        no.bounds = CGRect(x: 0, y: 0, width: 400, height: 300)
+        no.center = self.view.center
+        no.backgroundColor = UIColor.clear
+        
+        no.text = "Nothing is everything!"
+        no.textColor = UIColor.orange
+        no.textAlignment = .center
+        no.font = UIFont.systemFont(ofSize: 30)
+        
+        no.isHidden = true
+        return no
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.addSubview(noLabel)
+        
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
-        
-        
         return
         if #available(iOS 10.0, *) {
             if let scene = GKScene(fileNamed: "GameScene") {
@@ -68,3 +83,40 @@ class GameViewController: UIViewController {
         return true
     }
 }
+
+var start: CFTimeInterval?
+var end: CFTimeInterval?
+//        start = CACurrentMediaTime();
+
+extension ThereIsViewController {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.noLabel.appear()
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        
+        
+        guard touches.count < 2 else {
+            return
+        }
+        let point = touches.first?.location(in: self.view)
+        self.noLabel.center = point!
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        self.noLabel.disappear()
+        
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        
+    }
+}
+
+
+
