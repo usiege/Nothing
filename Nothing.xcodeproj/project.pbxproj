@@ -16,6 +16,8 @@
 		CE554C452091AD5200A3F7A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE554C442091AD5200A3F7A1 /* Assets.xcassets */; };
 		CE554C482091AD5200A3F7A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE554C462091AD5200A3F7A1 /* LaunchScreen.storyboard */; };
 		CEB053D02091BB3900455739 /* NOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB053CF2091BB3900455739 /* NOView.swift */; };
+		CEB053D52091DD0300455739 /* DateConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB053D42091DD0300455739 /* DateConst.swift */; };
+		CEB053D82091DF2400455739 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB053D72091DF2400455739 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		CE554C472091AD5200A3F7A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE554C492091AD5200A3F7A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB053CF2091BB3900455739 /* NOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NOView.swift; sourceTree = "<group>"; };
+		CEB053D42091DD0300455739 /* DateConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConst.swift; sourceTree = "<group>"; };
+		CEB053D72091DF2400455739 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 			children = (
 				CE554C372091AD4F00A3F7A1 /* AppDelegate.swift */,
 				CE554C3F2091AD4F00A3F7A1 /* ThereIsViewController.swift */,
+				CEB053D62091DF1900455739 /* Lib */,
+				CEB053D32091DCDF00455739 /* Const */,
 				CEB053D22091BD8500455739 /* View */,
 				CEB053D12091BD7800455739 /* Scene */,
 				CE554C442091AD5200A3F7A1 /* Assets.xcassets */,
@@ -99,6 +105,22 @@
 				CEB053CF2091BB3900455739 /* NOView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CEB053D32091DCDF00455739 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+				CEB053D42091DD0300455739 /* DateConst.swift */,
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		CEB053D62091DF1900455739 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				CEB053D72091DF2400455739 /* Extension.swift */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE554C3E2091AD4F00A3F7A1 /* GameScene.swift in Sources */,
+				CEB053D82091DF2400455739 /* Extension.swift in Sources */,
 				CE554C402091AD4F00A3F7A1 /* ThereIsViewController.swift in Sources */,
 				CE554C382091AD4F00A3F7A1 /* AppDelegate.swift in Sources */,
+				CEB053D52091DD0300455739 /* DateConst.swift in Sources */,
 				CEB053D02091BB3900455739 /* NOView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

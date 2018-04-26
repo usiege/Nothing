@@ -12,6 +12,8 @@ import GameplayKit
 
 class ThereIsViewController: UIViewController {
 
+    public var noDate: NODate?
+    
     public lazy var noLabel: UILabel = {
         let no = UILabel()
         no.bounds = CGRect(x: 0, y: 0, width: 400, height: 300)
@@ -29,8 +31,15 @@ class ThereIsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        switch self.noDate {
+        case let .April(date)?:
+            if date == APRIL_26_2018 {
+                self.view.addSubview(noLabel)
+            }
+        default:
+            return;
+        }
         
-        self.view.addSubview(noLabel)
         
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
@@ -84,37 +93,68 @@ class ThereIsViewController: UIViewController {
     }
 }
 
+
+
 var start: CFTimeInterval?
 var end: CFTimeInterval?
-//        start = CACurrentMediaTime();
+// start = CACurrentMediaTime();
 
 extension ThereIsViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.noLabel.appear()
+        switch self.noDate {
+        case let .April(date)?:
+            if date == APRIL_26_2018 {
+                self.noLabel.appear()
+            }
+        default:
+            return;
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        
-        
-        guard touches.count < 2 else {
-            return
+        switch self.noDate {
+        case let .April(date)?:
+            if date == APRIL_26_2018 {
+                guard touches.count < 2 else {
+                    return
+                }
+                let point = touches.first?.location(in: self.view)
+                self.noLabel.center = point!
+            }
+        default:
+            return;
         }
-        let point = touches.first?.location(in: self.view)
-        self.noLabel.center = point!
+        
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        self.noLabel.disappear()
+        switch self.noDate {
+        case let .April(date)?:
+            if date == APRIL_26_2018 {
+                self.noLabel.disappear()
+            }
+        default:
+            return;
+        }
+        
         
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
-        
+        switch self.noDate {
+        case let .April(date)?:
+            if date == APRIL_26_2018 {
+                
+            }
+        default:
+            return;
+        }
     }
 }
 
