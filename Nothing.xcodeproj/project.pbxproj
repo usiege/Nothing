@@ -45,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				CE554C362091AD4F00A3F7A1 /* Nothing */,
+				CE554C4F2091ADE000A3F7A1 /* Resources */,
 				CE554C352091AD4F00A3F7A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,15 +62,23 @@
 			isa = PBXGroup;
 			children = (
 				CE554C372091AD4F00A3F7A1 /* AppDelegate.swift */,
-				CE554C392091AD4F00A3F7A1 /* GameScene.sks */,
-				CE554C3B2091AD4F00A3F7A1 /* Actions.sks */,
 				CE554C3D2091AD4F00A3F7A1 /* GameScene.swift */,
 				CE554C3F2091AD4F00A3F7A1 /* GameViewController.swift */,
-				CE554C412091AD4F00A3F7A1 /* Main.storyboard */,
 				CE554C442091AD5200A3F7A1 /* Assets.xcassets */,
 				CE554C462091AD5200A3F7A1 /* LaunchScreen.storyboard */,
+				CE554C412091AD4F00A3F7A1 /* Main.storyboard */,
 				CE554C492091AD5200A3F7A1 /* Info.plist */,
 			);
+			path = Nothing;
+			sourceTree = "<group>";
+		};
+		CE554C4F2091ADE000A3F7A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE554C392091AD4F00A3F7A1 /* GameScene.sks */,
+				CE554C3B2091AD4F00A3F7A1 /* Actions.sks */,
+			);
+			name = Resources;
 			path = Nothing;
 			sourceTree = "<group>";
 		};
@@ -293,7 +302,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 472P9J8R6U;
 				INFOPLIST_FILE = Nothing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +321,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 472P9J8R6U;
 				INFOPLIST_FILE = Nothing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
