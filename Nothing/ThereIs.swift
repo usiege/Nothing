@@ -20,6 +20,7 @@ class ThereIs {
     }
     
     public var something: [String: ()->()]?
+    
     public func maybe(noDate: NODate, _ some: () -> ()) -> ThereIs {
         switch noDate {
         case let .April(date):

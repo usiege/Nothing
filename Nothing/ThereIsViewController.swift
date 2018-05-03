@@ -50,8 +50,11 @@ class ThereIsViewController: UIViewController {
 
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
-        return
+    }
+    
+    func gameScene() {
         if #available(iOS 10.0, *) {
+            
             if let scene = GKScene(fileNamed: "GameScene") {
                 
                 // Get the SKScene from the loaded GKScene
