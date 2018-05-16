@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class ThereIs {
     
     init() {
@@ -23,7 +22,7 @@ class ThereIs {
     
     public func maybe(noDate: NODate, _ some: () -> ()) -> ThereIs {
         switch noDate {
-        case let .April(date):
+        case let .Date(date):
             let myDate = date.toDate()
             let currentDate = Date()
             if let myDate = myDate {

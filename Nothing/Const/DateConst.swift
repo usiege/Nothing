@@ -10,10 +10,11 @@ import Foundation
 
 let DATE_FORMAT = "yyyy-MM-dd"
 enum NODate {
-    case April(String)
+    case Date(String)
 }
 
 // April
+let MARCH_16_2018 = "2018-05-16"
 let APRIL_26_2018 = "2018-04-26"
 let APRIL_27_2018 = "2018-04-27"
 

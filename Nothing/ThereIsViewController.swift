@@ -15,10 +15,11 @@ import CoreML
 class ThereIsViewController: UIViewController {
     
     public var thereis: ThereIs?
-    public var noDate: NODate?
-    private var dates: [NODate] = [
-        .April(APRIL_27_2018), // 0
-        .April(APRIL_26_2018)
+    public var today: NODate?
+    private var dates: [String: NODate] = [
+        MARCH_16_2018:.Date(MARCH_16_2018),
+        APRIL_27_2018:.Date(APRIL_27_2018),
+        APRIL_26_2018:.Date(APRIL_26_2018)
     ]
 
     public lazy var noLabel: UILabel = {
@@ -39,11 +40,11 @@ class ThereIsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.noDate = dates[0]
-        assert(self.noDate != nil, "Please set noDate for vc !")
+        self.today = dates[MARCH_16_2018]
         
-        thereis = ThereIs()
-        _ = thereis?.maybe(noDate: dates[0]) {
+        assert(self.today != nil, "Please set noDate for vc !")
+        
+        thereis = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
             self.view.addSubview(noLabel)
         }
         
@@ -113,19 +114,16 @@ extension ThereIsViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        
-        _ = thereis?.maybe(noDate: dates[0]) {
+        //
+        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
                 self.noLabel.appear()
             }
-            .maybe(noDate: dates[1]) {
-                
-            }
-
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        _ = thereis?.maybe(noDate: dates[0]) {
+        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
             guard touches.count < 2 else {
                 return
             }
@@ -137,14 +135,14 @@ extension ThereIsViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        _ = thereis?.maybe(noDate: dates[0]) {
+        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
             self.noLabel.disappear()
         }
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
-        _ = thereis?.maybe(noDate: dates[0]) {
+        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
             
         }
     }
