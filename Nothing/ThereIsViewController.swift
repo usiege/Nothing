@@ -127,7 +127,8 @@ extension ThereIsViewController {
         _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!, {
                 self.noLabel.appear()
             }).maybe(noDate: dates[MARCH_17_2018]!, {
-                self.circle.layerHidden(hidden: false)
+//                self.circle.layerHidden(hidden: false)
+                self.circle.animationLayer?.isHidden = false
                 self.circle.startAnimation(totalTime: 10)
             })
         
