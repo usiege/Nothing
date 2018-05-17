@@ -47,19 +47,19 @@ func invert(region: @escaping Region) -> Region {
     }
 }
 
-func intersection(region1: Region, region2: Region) -> Region {
+func intersection(region1: @escaping Region, region2: @escaping Region) -> Region {
     return { point in
         region1(point) && region2(point)
     }
 }
 
-func union(region1: Region, region2: Region) -> Region {
+func union(region1: @escaping Region, region2: @escaping Region) -> Region {
     return { point in
         region1(point) && region2(point)
     }
 }
 
-func difference(region: Region, minusRegion: Region) -> Region {
+func difference(region: @escaping Region, minusRegion: @escaping Region) -> Region {
     return intersection(region1: region, region2: invert(region: minusRegion))
 }
 

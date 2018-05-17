@@ -21,17 +21,31 @@ class ThereIs {
     public var something: [String: ()->()]?
     
     public func maybe(noDate: NODate, _ some: () -> ()) -> ThereIs {
+    
         switch noDate {
         case let .Date(date):
-            let myDate = date.toDate()
-            let currentDate = Date()
-            if let myDate = myDate {
-                if myDate.compare(currentDate) == .orderedSame {
+            let disposedDate = date.toDate()
+            
+            if let myDate = disposedDate {
+                if isCurrentDate(date: myDate) {
                     some()
                 }
             }
         }
+    
         return self
+    }
+    
+    private func isCurrentDate(date: Date) -> Bool {
+        let currentDate = Date()
+        if date.year() == currentDate.year() {
+            if date.month() == currentDate.month() {
+                if date.day() == currentDate.day() {
+                    return true
+                }
+            }
+        }
+        return false
     }
     
     public func maybe(param: [String: Any], _ some: ()->() ) -> ThereIs {
