@@ -31,11 +31,12 @@ class ThereIsViewController: UIViewController {
         
         thereis = ThereIs()
         
-        thereis?.maybe(noDate: dates[APRIL_27_2018]!,{
+        _ = thereis?
+            .maybe(noDate: dates[APRIL_27_2018]!,{
             self.view.addSubview(noLabel)
-        }).maybe(noDate: dates[MARCH_17_2018]!, {
-            self.view.addSubview(circle)
-        })
+            }).maybe(noDate: dates[MARCH_17_2018]!, {
+                self.view.addSubview(circle)
+            })
         
 
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
@@ -124,9 +125,11 @@ extension ThereIsViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         //
-        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!, {
+        _ = thereis?
+            .maybe(noDate: dates[APRIL_27_2018]!, {
                 self.noLabel.appear()
-            }).maybe(noDate: dates[MARCH_17_2018]!, {
+            })
+            .maybe(noDate: dates[MARCH_17_2018]!, {
 //                self.circle.layerHidden(hidden: false)
                 self.circle.animationLayer?.isHidden = false
                 self.circle.startAnimation(totalTime: 10)
@@ -136,21 +139,24 @@ extension ThereIsViewController {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
-            guard touches.count < 2 else {
-                return
-            }
-            let point = touches.first?.location(in: self.view)
-            self.noLabel.center = point!
-        }
+        _ = thereis?
+            .maybe(noDate: dates[APRIL_27_2018]!,{
+                guard touches.count < 2 else {
+                    return
+                }
+                
+                let point = touches.first?.location(in: self.view)
+                self.noLabel.center = point!
+            })
 
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
-            self.noLabel.disappear()
-        }
+        _ = thereis?
+            .maybe(noDate: dates[APRIL_27_2018]!,{
+                self.noLabel.disappear()
+            })
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
