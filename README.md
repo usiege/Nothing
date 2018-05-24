@@ -1,4 +1,7 @@
 # There is something in nothing.
+<p align='center'>
+<img src='contents/images/nothing_bg.png'>
+</p>
 
 ## 2018-05-17
   * 添加了一个转圈圈的效果；
