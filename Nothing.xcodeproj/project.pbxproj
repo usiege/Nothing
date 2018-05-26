@@ -21,6 +21,8 @@
 		CEB053DA2092F6FF00455739 /* ThereIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB053D92092F6FF00455739 /* ThereIs.swift */; };
 		CEFBE67420AC239700C19832 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBE67320AC239700C19832 /* Functional.swift */; };
 		CEFBE67720AC2B4400C19832 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBE67620AC2B4400C19832 /* CircleView.swift */; };
+		CEFBE67920B2D49100C19832 /* ProblemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBE67820B2D49100C19832 /* ProblemView.swift */; };
+		CEFBE67D20B6E74A00C19832 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFBE67C20B6E74A00C19832 /* Closure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		CEB053D92092F6FF00455739 /* ThereIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThereIs.swift; sourceTree = "<group>"; };
 		CEFBE67320AC239700C19832 /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		CEFBE67620AC2B4400C19832 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		CEFBE67820B2D49100C19832 /* ProblemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemView.swift; sourceTree = "<group>"; };
+		CEFBE67C20B6E74A00C19832 /* Closure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +80,11 @@
 				CE554C372091AD4F00A3F7A1 /* AppDelegate.swift */,
 				CE554C3F2091AD4F00A3F7A1 /* ThereIsViewController.swift */,
 				CEB053D92092F6FF00455739 /* ThereIs.swift */,
-				CEFBE67520AC23D500C19832 /* creaction */,
 				CEB053D62091DF1900455739 /* Lib */,
 				CEB053D32091DCDF00455739 /* Const */,
 				CEB053D22091BD8500455739 /* View */,
 				CEB053D12091BD7800455739 /* Scene */,
+				CEFBE67520AC23D500C19832 /* creaction */,
 				CE554C442091AD5200A3F7A1 /* Assets.xcassets */,
 				CE554C462091AD5200A3F7A1 /* LaunchScreen.storyboard */,
 				CE554C412091AD4F00A3F7A1 /* Main.storyboard */,
@@ -112,6 +116,7 @@
 			children = (
 				CEB053CF2091BB3900455739 /* NOView.swift */,
 				CEFBE67620AC2B4400C19832 /* CircleView.swift */,
+				CEFBE67820B2D49100C19832 /* ProblemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CEFBE67320AC239700C19832 /* Functional.swift */,
+				CEFBE67C20B6E74A00C19832 /* Closure.swift */,
 			);
 			path = creaction;
 			sourceTree = "<group>";
@@ -217,7 +223,9 @@
 				CE554C3E2091AD4F00A3F7A1 /* GameScene.swift in Sources */,
 				CEB053D82091DF2400455739 /* Extension.swift in Sources */,
 				CE554C402091AD4F00A3F7A1 /* ThereIsViewController.swift in Sources */,
+				CEFBE67920B2D49100C19832 /* ProblemView.swift in Sources */,
 				CE554C382091AD4F00A3F7A1 /* AppDelegate.swift in Sources */,
+				CEFBE67D20B6E74A00C19832 /* Closure.swift in Sources */,
 				CEB053D52091DD0300455739 /* DateConst.swift in Sources */,
 				CEB053DA2092F6FF00455739 /* ThereIs.swift in Sources */,
 				CEFBE67420AC239700C19832 /* Functional.swift in Sources */,

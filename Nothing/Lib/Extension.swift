@@ -56,9 +56,12 @@ extension Date {
 
 
 extension String {
+    
     func toDate() -> Date? {
         let formater = DateFormatter()
         formater.dateFormat = DATE_FORMAT
+        formater.timeZone = TimeZone(secondsFromGMT: 8)
+        formater.locale = Locale(identifier: "en_CN")
         
         return formater.date(from: self)
     }

@@ -1,6 +1,11 @@
 # There is something in nothing.
+<p align='center'>
+<img src='contents/images/nothing_bg.png'>
+</p>
 
-
+## 2018-05-17
+  * 添加了一个转圈圈的效果；
+  * 添加了日期判断，必须是当天才能玩哦；
 
 ## 2018-05-16
   * 函数链结构可以使用啦；

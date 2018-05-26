@@ -17,11 +17,37 @@ class ThereIsViewController: UIViewController {
     public var thereis: ThereIs?
     public var today: NODate?
     private var dates: [String: NODate] = [
-        MARCH_16_2018:.Date(MARCH_16_2018),
-        APRIL_27_2018:.Date(APRIL_27_2018),
+        MARCH_17_2018:.Date(MARCH_17_2018),
+        MARCH_16_2018:.Date(MARCH_16_2018), //
+        APRIL_27_2018:.Date(APRIL_27_2018), //添加了一个点击放大字的效果
         APRIL_26_2018:.Date(APRIL_26_2018)
     ]
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.today = dates[MARCH_16_2018]
+        assert(self.today != nil, "Please set noDate for vc !")
+        
+        thereis = ThereIs()
+        
+        _ = thereis?
+            .maybe(noDate: dates[APRIL_27_2018]!,{
+            self.view.addSubview(noLabel)
+            }).maybe(noDate: dates[MARCH_17_2018]!, {
+                self.view.addSubview(circle)
+            })
+        
+
+        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
+        // including entities and graphs.
+    }
+    public lazy var circle: CircleView = {
+        let frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        let circle = CircleView.init(frame: frame)
+        return circle
+    }()
+    
     public lazy var noLabel: UILabel = {
         let no = UILabel()
         no.bounds = CGRect(x: 0, y: 0, width: 400, height: 300)
@@ -36,22 +62,6 @@ class ThereIsViewController: UIViewController {
         no.isHidden = true
         return no
     }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.today = dates[MARCH_16_2018]
-        
-        assert(self.today != nil, "Please set noDate for vc !")
-        
-        thereis = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
-            self.view.addSubview(noLabel)
-        }
-        
-
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
-    }
     
     func gameScene() {
         if #available(iOS 10.0, *) {
@@ -115,29 +125,38 @@ extension ThereIsViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         //
-        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
+        _ = thereis?
+            .maybe(noDate: dates[APRIL_27_2018]!, {
                 self.noLabel.appear()
-            }
+            })
+            .maybe(noDate: dates[MARCH_17_2018]!, {
+//                self.circle.layerHidden(hidden: false)
+                self.circle.animationLayer?.isHidden = false
+                self.circle.startAnimation(totalTime: 10)
+            })
         
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesMoved(touches, with: event)
-        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
-            guard touches.count < 2 else {
-                return
-            }
-            let point = touches.first?.location(in: self.view)
-            self.noLabel.center = point!
-        }
+        _ = thereis?
+            .maybe(noDate: dates[APRIL_27_2018]!,{
+                guard touches.count < 2 else {
+                    return
+                }
+                
+                let point = touches.first?.location(in: self.view)
+                self.noLabel.center = point!
+            })
 
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        _ = thereis?.maybe(noDate: dates[APRIL_27_2018]!) {
-            self.noLabel.disappear()
-        }
+        _ = thereis?
+            .maybe(noDate: dates[APRIL_27_2018]!,{
+                self.noLabel.disappear()
+            })
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
