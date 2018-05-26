@@ -55,7 +55,7 @@ func intersection(region1: Region, region2: Region) -> Region {
 
 func union(region1: Region, region2: Region) -> Region {
     return { point in
-        region1(point) && region2(point)
+        region1(point) || region2(point)
     }
 }
 
