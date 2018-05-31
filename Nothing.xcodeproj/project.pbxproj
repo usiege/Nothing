@@ -89,6 +89,8 @@
 		CE3BCA7320BFA6EA00E6355B /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				CE554C392091AD4F00A3F7A1 /* GameScene.sks */,
+				CE554C3B2091AD4F00A3F7A1 /* Actions.sks */,
 				CE554C3D2091AD4F00A3F7A1 /* GameScene.swift */,
 			);
 			name = scene;
@@ -132,8 +134,6 @@
 		CE554C4F2091ADE000A3F7A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CE554C392091AD4F00A3F7A1 /* GameScene.sks */,
-				CE554C3B2091AD4F00A3F7A1 /* Actions.sks */,
 			);
 			name = Resources;
 			path = Nothing;
