@@ -12,13 +12,17 @@ import GameplayKit
 
 import CoreML
 
+extension ThereIsViewController: UIViewControllerTransitioningDelegate {
+    
+}
+
 class ThereIsViewController: UIViewController {
     
     public var thereis: ThereIs?
     public var today: NODate?
     private var dates: [String: NODate] = [
-        MARCH_17_2018:.Date(MARCH_17_2018),
-        MARCH_16_2018:.Date(MARCH_16_2018), //
+        MAY_17_2018:.Date(MAY_17_2018),
+        MAY_16_2018:.Date(MAY_16_2018), //
         APRIL_27_2018:.Date(APRIL_27_2018), //添加了一个点击放大字的效果
         APRIL_26_2018:.Date(APRIL_26_2018)
     ]
@@ -26,7 +30,7 @@ class ThereIsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.today = dates[MARCH_16_2018]
+        self.today = dates[MAY_16_2018]
         assert(self.today != nil, "Please set noDate for vc !")
         
         thereis = ThereIs()
@@ -34,7 +38,7 @@ class ThereIsViewController: UIViewController {
         _ = thereis?
             .maybe(noDate: dates[APRIL_27_2018]!,{
             self.view.addSubview(noLabel)
-            }).maybe(noDate: dates[MARCH_17_2018]!, {
+            }).maybe(noDate: dates[MAY_17_2018]!, {
                 self.view.addSubview(circle)
             })
         
@@ -129,7 +133,7 @@ extension ThereIsViewController {
             .maybe(noDate: dates[APRIL_27_2018]!, {
                 self.noLabel.appear()
             })
-            .maybe(noDate: dates[MARCH_17_2018]!, {
+            .maybe(noDate: dates[MAY_17_2018]!, {
 //                self.circle.layerHidden(hidden: false)
                 self.circle.animationLayer?.isHidden = false
                 self.circle.startAnimation(totalTime: 10)

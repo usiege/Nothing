@@ -111,6 +111,10 @@ class Filter {
 
 extension Array {
     
+    func style<S: CustomStringConvertible>(input: S) {
+        print(input.description)
+    }
+    
     func reduce<T>(initial: T, combine: (T, Element) -> T) -> T {
         var result = initial
         for x in self {
