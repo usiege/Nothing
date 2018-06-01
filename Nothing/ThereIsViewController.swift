@@ -21,6 +21,7 @@ class ThereIsViewController: UIViewController {
     public var thereis: ThereIs?
     public var today: NODate?
     private var dates: [String: NODate] = [
+//        JUNE_01_2018:.Date(JUNE_01_2018),
         MAY_17_2018:.Date(MAY_17_2018),
         MAY_16_2018:.Date(MAY_16_2018), //
         APRIL_27_2018:.Date(APRIL_27_2018), //添加了一个点击放大字的效果

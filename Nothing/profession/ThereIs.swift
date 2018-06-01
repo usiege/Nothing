@@ -20,6 +20,12 @@ class ThereIs {
     
     public var something: [String: ()->()]?
     
+    func printPointer() {
+        print(withUnsafePointer(to: &self.something, {
+            print("\($0)")
+        }))
+    }
+    
     public func maybe(noDate: NODate, _ some: () -> ()) -> ThereIs {
     
         switch noDate {
