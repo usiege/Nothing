@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		627CBA0920C262DB00D22923 /* CocosViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 627CBA0820C262DB00D22923 /* CocosViewController.mm */; };
 		CE3BCA6E20BF904600E6355B /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCA6D20BF904600E6355B /* Transition.swift */; };
 		CE3BCA7820C1326F00E6355B /* LuaBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCA7720C1326F00E6355B /* LuaBridge.mm */; };
 		CE3BCA7B20C1336800E6355B /* CocosLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCA7920C1336800E6355B /* CocosLua.cpp */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		627CBA0720C262DB00D22923 /* CocosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocosViewController.h; sourceTree = "<group>"; };
+		627CBA0820C262DB00D22923 /* CocosViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CocosViewController.mm; sourceTree = "<group>"; };
 		CE3BCA6D20BF904600E6355B /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		CE3BCA7520C1326F00E6355B /* Nothing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nothing-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE3BCA7620C1326F00E6355B /* LuaBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LuaBridge.h; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 		CE3BCA7420C1325000E6355B /* bridge */ = {
 			isa = PBXGroup;
 			children = (
+				627CBA0720C262DB00D22923 /* CocosViewController.h */,
+				627CBA0820C262DB00D22923 /* CocosViewController.mm */,
 				CE3BCA7520C1326F00E6355B /* Nothing-Bridging-Header.h */,
 				CE3BCA7620C1326F00E6355B /* LuaBridge.h */,
 				CE3BCA7720C1326F00E6355B /* LuaBridge.mm */,
@@ -218,11 +223,12 @@
 					CE554C332091AD4F00A3F7A1 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 0930;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = CE554C2F2091AD4F00A3F7A1 /* Build configuration list for PBXProject "Nothing" */;
-			compatibilityVersion = "Xcode 9.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -264,6 +270,7 @@
 				CEB053D82091DF2400455739 /* Extension.swift in Sources */,
 				CE554C402091AD4F00A3F7A1 /* ThereIsViewController.swift in Sources */,
 				CEFBE67920B2D49100C19832 /* ProblemView.swift in Sources */,
+				627CBA0920C262DB00D22923 /* CocosViewController.mm in Sources */,
 				CE554C382091AD4F00A3F7A1 /* AppDelegate.swift in Sources */,
 				CE3BCA7B20C1336800E6355B /* CocosLua.cpp in Sources */,
 				CE3BCA6E20BF904600E6355B /* Transition.swift in Sources */,
@@ -422,10 +429,7 @@
 				DEVELOPMENT_TEAM = 472P9J8R6U;
 				INFOPLIST_FILE = Nothing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.only.Nothing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nothing/bridge/Nothing-Bridging-Header.h";
@@ -445,10 +449,7 @@
 				DEVELOPMENT_TEAM = 472P9J8R6U;
 				INFOPLIST_FILE = Nothing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.only.Nothing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Nothing/bridge/Nothing-Bridging-Header.h";

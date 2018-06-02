@@ -8,7 +8,10 @@
 
 #include "CocosLua.hpp"
 
-
 CocosLua::CocosLua() {
+    
+}
+
+CocosLua::~CocosLua() {
     
 }

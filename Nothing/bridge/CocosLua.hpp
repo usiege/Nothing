@@ -15,10 +15,7 @@ class CocosLua {
     
 public:
     CocosLua();
-    
-    ~CocosLua() {
-        
-    }
+    ~CocosLua();
     
 public:
     void cocos_lua();
