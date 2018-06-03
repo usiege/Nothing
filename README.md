@@ -3,6 +3,11 @@
 <img src='contents/images/nothing_bg.png'>
 </p>
 
+## 2018-06-03
+  * 添加了cocos2dx-lua配置工程；
+  * 可以在swift工程中做lua小游戏了；
+  * 请参见：[CocosLua工程说明](https://github.com/usiege/CocosLua)
+
 ## 2018-05-17
   * 添加了一个转圈圈的效果；
   * 添加了日期判断，必须是当天才能玩哦；
