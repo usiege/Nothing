@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		627CBA0920C262DB00D22923 /* CocosViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 627CBA0820C262DB00D22923 /* CocosViewController.mm */; };
+		628A939720C3C3C60075381D /* CocosLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628A939620C3C3C60075381D /* CocosLua.cpp */; };
 		CE3BCA6E20BF904600E6355B /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCA6D20BF904600E6355B /* Transition.swift */; };
 		CE3BCA7820C1326F00E6355B /* LuaBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCA7720C1326F00E6355B /* LuaBridge.mm */; };
-		CE3BCA7B20C1336800E6355B /* CocosLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE3BCA7920C1336800E6355B /* CocosLua.cpp */; };
 		CE554C382091AD4F00A3F7A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554C372091AD4F00A3F7A1 /* AppDelegate.swift */; };
 		CE554C3A2091AD4F00A3F7A1 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CE554C392091AD4F00A3F7A1 /* GameScene.sks */; };
 		CE554C3C2091AD4F00A3F7A1 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = CE554C3B2091AD4F00A3F7A1 /* Actions.sks */; };
 		CE554C3E2091AD4F00A3F7A1 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554C3D2091AD4F00A3F7A1 /* GameScene.swift */; };
-		CE554C402091AD4F00A3F7A1 /* ThereIsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554C3F2091AD4F00A3F7A1 /* ThereIsViewController.swift */; };
+		CE554C402091AD4F00A3F7A1 /* ThereisaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554C3F2091AD4F00A3F7A1 /* ThereisaViewController.swift */; };
 		CE554C432091AD4F00A3F7A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE554C412091AD4F00A3F7A1 /* Main.storyboard */; };
 		CE554C452091AD5200A3F7A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE554C442091AD5200A3F7A1 /* Assets.xcassets */; };
 		CE554C482091AD5200A3F7A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE554C462091AD5200A3F7A1 /* LaunchScreen.storyboard */; };
@@ -32,18 +32,18 @@
 /* Begin PBXFileReference section */
 		627CBA0720C262DB00D22923 /* CocosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocosViewController.h; sourceTree = "<group>"; };
 		627CBA0820C262DB00D22923 /* CocosViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CocosViewController.mm; sourceTree = "<group>"; };
+		628A939520C3C3C60075381D /* CocosLua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CocosLua.hpp; sourceTree = "<group>"; };
+		628A939620C3C3C60075381D /* CocosLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosLua.cpp; sourceTree = "<group>"; };
 		CE3BCA6D20BF904600E6355B /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		CE3BCA7520C1326F00E6355B /* Nothing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Nothing-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE3BCA7620C1326F00E6355B /* LuaBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LuaBridge.h; sourceTree = "<group>"; };
 		CE3BCA7720C1326F00E6355B /* LuaBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LuaBridge.mm; sourceTree = "<group>"; };
-		CE3BCA7920C1336800E6355B /* CocosLua.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CocosLua.cpp; sourceTree = "<group>"; };
-		CE3BCA7A20C1336800E6355B /* CocosLua.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CocosLua.hpp; sourceTree = "<group>"; };
 		CE554C342091AD4F00A3F7A1 /* Nothing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nothing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE554C372091AD4F00A3F7A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE554C392091AD4F00A3F7A1 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		CE554C3B2091AD4F00A3F7A1 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		CE554C3D2091AD4F00A3F7A1 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		CE554C3F2091AD4F00A3F7A1 /* ThereIsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThereIsViewController.swift; sourceTree = "<group>"; };
+		CE554C3F2091AD4F00A3F7A1 /* ThereisaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThereisaViewController.swift; sourceTree = "<group>"; };
 		CE554C422091AD4F00A3F7A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE554C442091AD5200A3F7A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE554C472091AD5200A3F7A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,8 +114,8 @@
 				CE3BCA7520C1326F00E6355B /* Nothing-Bridging-Header.h */,
 				CE3BCA7620C1326F00E6355B /* LuaBridge.h */,
 				CE3BCA7720C1326F00E6355B /* LuaBridge.mm */,
-				CE3BCA7A20C1336800E6355B /* CocosLua.hpp */,
-				CE3BCA7920C1336800E6355B /* CocosLua.cpp */,
+				628A939620C3C3C60075381D /* CocosLua.cpp */,
+				628A939520C3C3C60075381D /* CocosLua.hpp */,
 			);
 			path = bridge;
 			sourceTree = "<group>";
@@ -124,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				CE554C362091AD4F00A3F7A1 /* Nothing */,
-				CE554C4F2091ADE000A3F7A1 /* Resources */,
 				CE554C352091AD4F00A3F7A1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -141,7 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CE554C372091AD4F00A3F7A1 /* AppDelegate.swift */,
-				CE554C3F2091AD4F00A3F7A1 /* ThereIsViewController.swift */,
+				CE554C3F2091AD4F00A3F7A1 /* ThereisaViewController.swift */,
 				CE3BCA7420C1325000E6355B /* bridge */,
 				CE3BCA7020BFA6C200E6355B /* display */,
 				CE3BCA6F20BFA68D00E6355B /* profession */,
@@ -153,14 +152,6 @@
 				CE554C412091AD4F00A3F7A1 /* Main.storyboard */,
 				CE554C492091AD5200A3F7A1 /* Info.plist */,
 			);
-			path = Nothing;
-			sourceTree = "<group>";
-		};
-		CE554C4F2091ADE000A3F7A1 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
 			path = Nothing;
 			sourceTree = "<group>";
 		};
@@ -267,12 +258,12 @@
 			files = (
 				CEFBE67720AC2B4400C19832 /* CircleView.swift in Sources */,
 				CE554C3E2091AD4F00A3F7A1 /* GameScene.swift in Sources */,
+				628A939720C3C3C60075381D /* CocosLua.cpp in Sources */,
 				CEB053D82091DF2400455739 /* Extension.swift in Sources */,
-				CE554C402091AD4F00A3F7A1 /* ThereIsViewController.swift in Sources */,
+				CE554C402091AD4F00A3F7A1 /* ThereisaViewController.swift in Sources */,
 				CEFBE67920B2D49100C19832 /* ProblemView.swift in Sources */,
 				627CBA0920C262DB00D22923 /* CocosViewController.mm in Sources */,
 				CE554C382091AD4F00A3F7A1 /* AppDelegate.swift in Sources */,
-				CE3BCA7B20C1336800E6355B /* CocosLua.cpp in Sources */,
 				CE3BCA6E20BF904600E6355B /* Transition.swift in Sources */,
 				CEFBE67D20B6E74A00C19832 /* Closure.swift in Sources */,
 				CE3BCA7820C1326F00E6355B /* LuaBridge.mm in Sources */,

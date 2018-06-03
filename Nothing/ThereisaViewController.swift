@@ -12,20 +12,19 @@ import GameplayKit
 
 import CoreML
 
-extension ThereIsViewController: UIViewControllerTransitioningDelegate {
+extension ThereisaViewController: UIViewControllerTransitioningDelegate {
     
 }
 
-class ThereIsViewController: UIViewController {
+class ThereisaViewController: UIViewController {
     
     public var thereis: ThereIs?
     public var today: NODate?
+    
     private var dates: [String: NODate] = [
-//        JUNE_01_2018:.Date(JUNE_01_2018),
-        MAY_17_2018:.Date(MAY_17_2018),
-        MAY_16_2018:.Date(MAY_16_2018), //
+        JUNE_03_2018:.Date(JUNE_03_2018),   //cocos2dx-lua工程添加
+        MAY_17_2018:.Date(MAY_17_2018), //添加了一个圆环进度条
         APRIL_27_2018:.Date(APRIL_27_2018), //添加了一个点击放大字的效果
-        APRIL_26_2018:.Date(APRIL_26_2018)
     ]
 
     override func viewDidLoad() {
@@ -125,7 +124,7 @@ var start: CFTimeInterval?
 var end: CFTimeInterval?
 // start = CACurrentMediaTime();
 
-extension ThereIsViewController {
+extension ThereisaViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)

@@ -12,8 +12,6 @@
 @interface LuaBridge()
 {
     CocosLua _cocosLua;
-    
-    CocosLua* testLua;
 }
 
 @end
@@ -30,14 +28,6 @@
     return self;
 }
 
-- (void)bridgePointer
-{
-    CocosLua* othercl = &_cocosLua;
-    
-    testLua = othercl;
-    testLua = new CocosLua();
-}
-
 static LuaBridge* _bridge = nil;
 
 + (instancetype)shared {
@@ -46,6 +36,15 @@ static LuaBridge* _bridge = nil;
         _bridge = [[LuaBridge alloc] init];
     });
     return _bridge;
+}
+
+- (void)bridgePointer
+{
+    CocosLua* othercl = &_cocosLua;
+    
+    CocosLua* testLua;
+    testLua = othercl;
+    testLua = new CocosLua();
 }
 
 @end
