@@ -18,6 +18,7 @@ class ThereIs {
         
     }
     
+    public var today: NODate?
     public var something: [String: ()->()]?
     
     func printPointer() {
@@ -28,6 +29,15 @@ class ThereIs {
     
     public func maybe(noDate: NODate, _ some: () -> ()) -> ThereIs {
     
+        //测试
+        assert(self.today != nil, "Please set noDate for vc !")
+        if noDate == self.today! {
+            some()
+            return self
+        }
+        
+        
+        ///正式使用
         switch noDate {
         case let .Date(date):
             let disposedDate = date.toDate()

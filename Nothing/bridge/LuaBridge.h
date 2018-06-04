@@ -7,9 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "platform/ios/CCEAGLView-ios.h"
 
 @interface LuaBridge : NSObject
 
+@property (strong) CCEAGLView* eaglView;
+
 + (instancetype)shared;
+- (void)setupWithFrame:(CGRect)frame;
 
 @end

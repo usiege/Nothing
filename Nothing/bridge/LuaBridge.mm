@@ -7,14 +7,20 @@
 //
 
 #import "LuaBridge.h"
+
+#include "cocos2d.h"
+#include "AppDelegate.h"
 #include "CocosLua.hpp"
+
 
 @interface LuaBridge()
 {
     CocosLua _cocosLua;
+    cocos2d::Application* _app;
 }
-
 @end
+
+static AppDelegate* _cocosDelegate = nil;
 
 @implementation LuaBridge
 
@@ -24,6 +30,9 @@
     if (self) {
         _cocosLua = CocosLua();
         
+        //cocos2d initiatial
+        _cocosDelegate = new AppDelegate();
+        _app = cocos2d::Application::getInstance();
     }
     return self;
 }
@@ -38,6 +47,24 @@ static LuaBridge* _bridge = nil;
     return _bridge;
 }
 
+- (void)setupWithFrame:(CGRect)frame {
+    
+    CCEAGLView* eaglView = [CCEAGLView viewWithFrame:frame
+                                         pixelFormat:kEAGLColorFormatRGB565
+                                         depthFormat:GL_DEPTH24_STENCIL8_OES
+                                  preserveBackbuffer:NO
+                                          sharegroup:nil
+                                       multiSampling:NO
+                                     numberOfSamples:0];
+    cocos2d::GLView* glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void*)eaglView);
+    cocos2d::Director::getInstance()->setOpenGLView(glview);
+    
+    cocos2d::Application::getInstance()->run();
+    
+    self.eaglView = eaglView;
+}
+
+//prointer mark
 - (void)bridgePointer
 {
     CocosLua* othercl = &_cocosLua;

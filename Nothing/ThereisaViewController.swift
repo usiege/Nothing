@@ -19,21 +19,37 @@ extension ThereisaViewController: UIViewControllerTransitioningDelegate {
 class ThereisaViewController: UIViewController {
     
     public var thereis: ThereIs?
-    public var today: NODate?
+    
     
     private var dates: [String: NODate] = [
         JUNE_03_2018:.Date(JUNE_03_2018),   //cocos2dx-lua工程添加
-        MAY_17_2018:.Date(MAY_17_2018), //添加了一个圆环进度条
+        MAY_17_2018:.Date(MAY_17_2018),     //添加了一个圆环进度条
         APRIL_27_2018:.Date(APRIL_27_2018), //添加了一个点击放大字的效果
     ]
+    
+    var cocosButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        button.backgroundColor = UIColor.clear
+        button.setTitle("", for: .normal)
+        button.addTarget(self, action: #selector(cocosViewController), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc
+    func cocosViewController() {
+        let cocos_vc = CocosViewController()
+        self.present(cocos_vc, animated: true) {
+            print(#function)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.today = dates[MAY_16_2018]
-        assert(self.today != nil, "Please set noDate for vc !")
-        
+        self.view.addSubview(cocosButton)
+    
         thereis = ThereIs()
+        thereis?.today = dates[JUNE_03_2018]
         
         _ = thereis?
             .maybe(noDate: dates[APRIL_27_2018]!,{

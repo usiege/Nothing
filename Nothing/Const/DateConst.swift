@@ -9,7 +9,7 @@
 import Foundation
 
 let DATE_FORMAT = "YYYY-MM-dd"
-enum NODate {
+enum NODate: Equatable {
     case Date(String)
 }
 
