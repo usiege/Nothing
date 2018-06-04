@@ -668,7 +668,6 @@
 					"$(PROJECT_DIR)/cocos2d-x/external/lua/lua",
 					"$(PROJECT_DIR)/cocos2d-x/external/lua",
 					"$(PROJECT_DIR)/cocos2d-x/external",
-					"$(PROJECT_DIR)/cocos2d-x/Classes",
 				);
 				INFOPLIST_FILE = Nothing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -850,7 +849,6 @@
 					"$(PROJECT_DIR)/cocos2d-x/external/lua/lua",
 					"$(PROJECT_DIR)/cocos2d-x/external/lua",
 					"$(PROJECT_DIR)/cocos2d-x/external",
-					"$(PROJECT_DIR)/cocos2d-x/Classes",
 				);
 				INFOPLIST_FILE = Nothing/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

@@ -12,6 +12,8 @@ import GameplayKit
 
 import CoreML
 
+let SCREEN_TIMES:CGFloat = 64
+
 extension ThereisaViewController: UIViewControllerTransitioningDelegate {
     
 }
@@ -29,7 +31,7 @@ class ThereisaViewController: UIViewController {
     
     var cocosButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        button.frame = CGRect(x: 0, y: 0, width: SCREEN_TIMES, height: SCREEN_TIMES)
         button.backgroundColor = UIColor.clear
         button.setTitle("", for: .normal)
         button.addTarget(self, action: #selector(cocosViewController), for: .touchUpInside)
