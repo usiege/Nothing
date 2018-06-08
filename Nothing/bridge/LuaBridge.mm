@@ -58,10 +58,32 @@ static LuaBridge* _bridge = nil;
                                      numberOfSamples:0];
     cocos2d::GLView* glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void*)eaglView);
     cocos2d::Director::getInstance()->setOpenGLView(glview);
-    
-    cocos2d::Application::getInstance()->run();
-    
+
     self.eaglView = eaglView;
+}
+
+- (void)directorPause {
+    cocos2d::Director::getInstance()->pause();
+}
+
+- (void)directorResume {
+    cocos2d::Director::getInstance()->resume();
+}
+
+- (void)purgeCachedData {
+    cocos2d::Director::getInstance()->purgeCachedData();
+}
+
+- (void)applicationRun {
+    _app->run();
+}
+
+- (void)applicationDidEnterBackground {
+    _app->applicationDidEnterBackground();
+}
+
+- (void)applicationWillEnterForeground {
+    _app->applicationWillEnterForeground();
 }
 
 //prointer mark

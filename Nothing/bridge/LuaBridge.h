@@ -11,9 +11,19 @@
 
 @interface LuaBridge : NSObject
 
-@property (strong) CCEAGLView* eaglView;
-
 + (instancetype)shared;
+@property (strong) CCEAGLView* eaglView;
 - (void)setupWithFrame:(CGRect)frame;
+
+//Director
+- (void)directorPause;
+- (void)directorResume;
+- (void)purgeCachedData;
+
+//application
+- (void)applicationRun;
+- (void)applicationDidEnterBackground;
+- (void)applicationWillEnterForeground;
+
 
 @end

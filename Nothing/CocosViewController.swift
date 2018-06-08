@@ -22,23 +22,12 @@ class CocosViewController: UIViewController {
     
     @objc
     func quitViewController() {
-        self.dismiss(animated: true) {
-            print(#function)
-        }
+        print("test button!")
     }
-    
-    var cocos: LuaBridge?
-    func setupCocos() {
-        let ocbridge = LuaBridge.shared();
-        ocbridge?.setup(withFrame: self.view.bounds)
-        
-        self.cocos = ocbridge
-        self.view = cocos?.eaglView
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.setupCocos()
         self.view.addSubview(quitButton)
     }
     
