@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GLKit
 
 class CocosViewController: UIViewController {
 

@@ -9,8 +9,20 @@
 import Foundation
 
 let DATE_FORMAT = "YYYY-MM-dd"
+
 enum NODate: Equatable {
+    
+    static func ==(lhs: NODate, rhs: NODate) -> Bool {
+//        if let lhs(ld) && rhs(rd) {
+//            if ld == rd {
+//                return true
+//            }
+//        }
+        return false
+    }
+    
     case Date(String)
+    
 }
 
 //June

@@ -27,6 +27,7 @@
 		628AB54720C42FC90075381D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB54620C42FC90075381D /* UIKit.framework */; };
 		628AB54920C4305E0075381D /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB54820C4305E0075381D /* libz.1.dylib */; };
 		628AB54B20C4307F0075381D /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB54A20C4307F0075381D /* libiconv.2.dylib */; };
+		628ABB5F20C989E40075381D /* cocos2d-x in Resources */ = {isa = PBXBuildFile; fileRef = 628ABB5E20C989E40075381D /* cocos2d-x */; };
 		CE34DA8C20C4E9A40063B771 /* CocosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34DA8B20C4E9A40063B771 /* CocosViewController.swift */; };
 		CE34DA9020C4EC400063B771 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = CE34DA8D20C4EC3F0063B771 /* config.json */; };
 		CE34DA9120C4EC400063B771 /* src in Resources */ = {isa = PBXBuildFile; fileRef = CE34DA8E20C4EC3F0063B771 /* src */; };
@@ -120,6 +121,7 @@
 		628AB54620C42FC90075381D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		628AB54820C4305E0075381D /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		628AB54A20C4307F0075381D /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = ../../../../../usr/lib/libiconv.2.dylib; sourceTree = "<group>"; };
+		628ABB5E20C989E40075381D /* cocos2d-x */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "cocos2d-x"; sourceTree = "<group>"; };
 		CE34DA8B20C4E9A40063B771 /* CocosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocosViewController.swift; sourceTree = "<group>"; };
 		CE34DA8D20C4EC3F0063B771 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		CE34DA8E20C4EC3F0063B771 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		CE554C2B2091AD4F00A3F7A1 = {
 			isa = PBXGroup;
 			children = (
+				628ABB5E20C989E40075381D /* cocos2d-x */,
 				628AB51B20C42DD20075381D /* libsimulator.xcodeproj */,
 				628AB50F20C42DA60075381D /* cocos2d_libs.xcodeproj */,
 				628AB50320C42D3B0075381D /* cocos2d_lua_bindings.xcodeproj */,
@@ -462,6 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628ABB5F20C989E40075381D /* cocos2d-x in Resources */,
 				CE554C432091AD4F00A3F7A1 /* Main.storyboard in Resources */,
 				CE554C3A2091AD4F00A3F7A1 /* GameScene.sks in Resources */,
 				CE554C452091AD5200A3F7A1 /* Assets.xcassets in Resources */,
