@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		623BA4EA20DD2C890052613D /* LuaObjectCBridgeTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 623BA4E920DD2C890052613D /* LuaObjectCBridgeTest.mm */; };
+		623BA4ED20DFBD5E0052613D /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA4EC20DFBD5E0052613D /* GameObject.swift */; };
+		623BA4EF20DFBE1A0052613D /* MovableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA4EE20DFBE1A0052613D /* MovableObject.swift */; };
+		623BA4F120DFBE380052613D /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA4F020DFBE380052613D /* Monster.swift */; };
+		623BA4F320DFBE420052613D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA4F220DFBE420052613D /* Player.swift */; };
+		623BA4F520DFBE560052613D /* Goblin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA4F420DFBE560052613D /* Goblin.swift */; };
+		623BA4F720DFBE630052613D /* Dragon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA4F620DFBE630052613D /* Dragon.swift */; };
+		623BA4FF20DFBEC30052613D /* CollectableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA4FE20DFBEC30052613D /* CollectableObject.swift */; };
+		623BA50420DFBF070052613D /* HealthPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA50320DFBF070052613D /* HealthPack.swift */; };
+		623BA50620DFBF1A0052613D /* Ammo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA50520DFBF1A0052613D /* Ammo.swift */; };
+		623BA50820DFBF5B0052613D /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA50720DFBF5B0052613D /* Component.swift */; };
+		623BA50A20DFC0C50052613D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623BA50920DFC0C50052613D /* GameViewController.swift */; };
 		628A939720C3C3C60075381D /* CocosLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628A939620C3C3C60075381D /* CocosLua.cpp */; };
 		628AB50220C414090075381D /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 628AB50120C414090075381D /* AppDelegate.cpp */; };
 		628AB52B20C42F4E0075381D /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB51820C42DA60075381D /* libcocos2d iOS.a */; };
@@ -98,6 +110,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		623BA4E820DD2C890052613D /* LuaObjectCBridgeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuaObjectCBridgeTest.h; sourceTree = "<group>"; };
+		623BA4E920DD2C890052613D /* LuaObjectCBridgeTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LuaObjectCBridgeTest.mm; sourceTree = "<group>"; };
+		623BA4EC20DFBD5E0052613D /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		623BA4EE20DFBE1A0052613D /* MovableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableObject.swift; sourceTree = "<group>"; };
+		623BA4F020DFBE380052613D /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		623BA4F220DFBE420052613D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		623BA4F420DFBE560052613D /* Goblin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goblin.swift; sourceTree = "<group>"; };
+		623BA4F620DFBE630052613D /* Dragon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dragon.swift; sourceTree = "<group>"; };
+		623BA4FE20DFBEC30052613D /* CollectableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectableObject.swift; sourceTree = "<group>"; };
+		623BA50320DFBF070052613D /* HealthPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthPack.swift; sourceTree = "<group>"; };
+		623BA50520DFBF1A0052613D /* Ammo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ammo.swift; sourceTree = "<group>"; };
+		623BA50720DFBF5B0052613D /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		623BA50920DFC0C50052613D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		628A939520C3C3C60075381D /* CocosLua.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CocosLua.hpp; sourceTree = "<group>"; };
 		628A939620C3C3C60075381D /* CocosLua.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosLua.cpp; sourceTree = "<group>"; };
 		628AB4FF20C414090075381D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -179,6 +204,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		623BA4EB20DFBD310052613D /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				623BA4EC20DFBD5E0052613D /* GameObject.swift */,
+				623BA50720DFBF5B0052613D /* Component.swift */,
+				623BA50220DFBEE00052613D /* Collect */,
+				623BA4F820DFBE690052613D /* Movable */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		623BA4F820DFBE690052613D /* Movable */ = {
+			isa = PBXGroup;
+			children = (
+				623BA4EE20DFBE1A0052613D /* MovableObject.swift */,
+				623BA4F020DFBE380052613D /* Monster.swift */,
+				623BA4F420DFBE560052613D /* Goblin.swift */,
+				623BA4F620DFBE630052613D /* Dragon.swift */,
+				623BA4F220DFBE420052613D /* Player.swift */,
+			);
+			name = Movable;
+			sourceTree = "<group>";
+		};
+		623BA50220DFBEE00052613D /* Collect */ = {
+			isa = PBXGroup;
+			children = (
+				623BA4FE20DFBEC30052613D /* CollectableObject.swift */,
+				623BA50320DFBF070052613D /* HealthPack.swift */,
+				623BA50520DFBF1A0052613D /* Ammo.swift */,
+			);
+			name = Collect;
+			sourceTree = "<group>";
+		};
 		628AB45E20C412430075381D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +344,8 @@
 			isa = PBXGroup;
 			children = (
 				CE3BCA7520C1326F00E6355B /* Nothing-Bridging-Header.h */,
+				623BA4E820DD2C890052613D /* LuaObjectCBridgeTest.h */,
+				623BA4E920DD2C890052613D /* LuaObjectCBridgeTest.mm */,
 				CE3BCA7620C1326F00E6355B /* LuaBridge.h */,
 				CE3BCA7720C1326F00E6355B /* LuaBridge.mm */,
 				628A939620C3C3C60075381D /* CocosLua.cpp */,
@@ -322,7 +382,9 @@
 			children = (
 				CE554C372091AD4F00A3F7A1 /* AppDelegate.swift */,
 				CE554C3F2091AD4F00A3F7A1 /* ThereisaViewController.swift */,
+				623BA50920DFC0C50052613D /* GameViewController.swift */,
 				CE34DA8B20C4E9A40063B771 /* CocosViewController.swift */,
+				623BA4EB20DFBD310052613D /* Game */,
 				CE3BCA7420C1325000E6355B /* bridge */,
 				CE3BCA7020BFA6C200E6355B /* display */,
 				CE3BCA6F20BFA68D00E6355B /* profession */,
@@ -484,19 +546,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623BA50A20DFC0C50052613D /* GameViewController.swift in Sources */,
+				623BA4F120DFBE380052613D /* Monster.swift in Sources */,
 				CEFBE67720AC2B4400C19832 /* CircleView.swift in Sources */,
 				CE554C3E2091AD4F00A3F7A1 /* GameScene.swift in Sources */,
+				623BA4ED20DFBD5E0052613D /* GameObject.swift in Sources */,
+				623BA4F320DFBE420052613D /* Player.swift in Sources */,
 				628A939720C3C3C60075381D /* CocosLua.cpp in Sources */,
 				CEB053D82091DF2400455739 /* Extension.swift in Sources */,
 				CE554C402091AD4F00A3F7A1 /* ThereisaViewController.swift in Sources */,
 				CEFBE67920B2D49100C19832 /* ProblemView.swift in Sources */,
+				623BA50620DFBF1A0052613D /* Ammo.swift in Sources */,
+				623BA50820DFBF5B0052613D /* Component.swift in Sources */,
 				CE554C382091AD4F00A3F7A1 /* AppDelegate.swift in Sources */,
+				623BA4F520DFBE560052613D /* Goblin.swift in Sources */,
 				CE3BCA6E20BF904600E6355B /* Transition.swift in Sources */,
+				623BA4EF20DFBE1A0052613D /* MovableObject.swift in Sources */,
 				CEFBE67D20B6E74A00C19832 /* Closure.swift in Sources */,
+				623BA50420DFBF070052613D /* HealthPack.swift in Sources */,
+				623BA4EA20DD2C890052613D /* LuaObjectCBridgeTest.mm in Sources */,
 				CE3BCA7820C1326F00E6355B /* LuaBridge.mm in Sources */,
 				CE34DA8C20C4E9A40063B771 /* CocosViewController.swift in Sources */,
 				CEB053D52091DD0300455739 /* DateConst.swift in Sources */,
 				628AB50220C414090075381D /* AppDelegate.cpp in Sources */,
+				623BA4FF20DFBEC30052613D /* CollectableObject.swift in Sources */,
+				623BA4F720DFBE630052613D /* Dragon.swift in Sources */,
 				CEB053DA2092F6FF00455739 /* ThereIs.swift in Sources */,
 				CEFBE67420AC239700C19832 /* Functional.swift in Sources */,
 				CEB053D02091BB3900455739 /* NOView.swift in Sources */,
