@@ -27,6 +27,11 @@
 		628AB54720C42FC90075381D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB54620C42FC90075381D /* UIKit.framework */; };
 		628AB54920C4305E0075381D /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB54820C4305E0075381D /* libz.1.dylib */; };
 		628AB54B20C4307F0075381D /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB54A20C4307F0075381D /* libiconv.2.dylib */; };
+		CE03E69920EB62A400973C76 /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E69820EB62A400973C76 /* Extension+Button.swift */; };
+		CE03E6A020EC706A00973C76 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E69F20EC706A00973C76 /* Pattern.swift */; };
+		CE03E6A320ECA70D00973C76 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E6A220ECA70D00973C76 /* DebugViewController.swift */; };
+		CE03E6A620ECABD000973C76 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E6A520ECABD000973C76 /* DebugView.swift */; };
+		CE03E6A820ECE09100973C76 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E6A720ECE09100973C76 /* TestViewController.swift */; };
 		CE34DA8C20C4E9A40063B771 /* CocosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE34DA8B20C4E9A40063B771 /* CocosViewController.swift */; };
 		CE34DA9020C4EC400063B771 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = CE34DA8D20C4EC3F0063B771 /* config.json */; };
 		CE34DA9120C4EC400063B771 /* src in Resources */ = {isa = PBXBuildFile; fileRef = CE34DA8E20C4EC3F0063B771 /* src */; };
@@ -120,6 +125,11 @@
 		628AB54620C42FC90075381D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		628AB54820C4305E0075381D /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		628AB54A20C4307F0075381D /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = ../../../../../usr/lib/libiconv.2.dylib; sourceTree = "<group>"; };
+		CE03E69820EB62A400973C76 /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
+		CE03E69F20EC706A00973C76 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		CE03E6A220ECA70D00973C76 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
+		CE03E6A520ECABD000973C76 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
+		CE03E6A720ECE09100973C76 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		CE34DA8B20C4E9A40063B771 /* CocosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocosViewController.swift; sourceTree = "<group>"; };
 		CE34DA8D20C4EC3F0063B771 /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		CE34DA8E20C4EC3F0063B771 /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; path = src; sourceTree = "<group>"; };
@@ -266,6 +276,7 @@
 				CEB053CF2091BB3900455739 /* NOView.swift */,
 				CEFBE67620AC2B4400C19832 /* CircleView.swift */,
 				CEFBE67820B2D49100C19832 /* ProblemView.swift */,
+				CE03E6A520ECABD000973C76 /* DebugView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -320,9 +331,11 @@
 				CE554C372091AD4F00A3F7A1 /* AppDelegate.swift */,
 				CE554C3F2091AD4F00A3F7A1 /* ThereisaViewController.swift */,
 				CE34DA8B20C4E9A40063B771 /* CocosViewController.swift */,
+				CE03E6A220ECA70D00973C76 /* DebugViewController.swift */,
+				CE03E6A720ECE09100973C76 /* TestViewController.swift */,
+				CE3BCA6F20BFA68D00E6355B /* profession */,
 				CE3BCA7420C1325000E6355B /* bridge */,
 				CE3BCA7020BFA6C200E6355B /* display */,
-				CE3BCA6F20BFA68D00E6355B /* profession */,
 				CEFBE67520AC23D500C19832 /* compontent */,
 				CEB053D32091DCDF00455739 /* Const */,
 				CEB053D62091DF1900455739 /* Lib */,
@@ -346,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				CEB053D72091DF2400455739 /* Extension.swift */,
+				CE03E69820EB62A400973C76 /* Extension+Button.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -356,6 +370,7 @@
 				CEFBE67C20B6E74A00C19832 /* Closure.swift */,
 				CEFBE67320AC239700C19832 /* Functional.swift */,
 				CE3BCA6D20BF904600E6355B /* Transition.swift */,
+				CE03E69F20EC706A00973C76 /* Pattern.swift */,
 			);
 			path = compontent;
 			sourceTree = "<group>";
@@ -480,19 +495,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE03E6A020EC706A00973C76 /* Pattern.swift in Sources */,
+				CE03E6A320ECA70D00973C76 /* DebugViewController.swift in Sources */,
 				CEFBE67720AC2B4400C19832 /* CircleView.swift in Sources */,
 				CE554C3E2091AD4F00A3F7A1 /* GameScene.swift in Sources */,
 				628A939720C3C3C60075381D /* CocosLua.cpp in Sources */,
 				CEB053D82091DF2400455739 /* Extension.swift in Sources */,
 				CE554C402091AD4F00A3F7A1 /* ThereisaViewController.swift in Sources */,
+				CE03E6A820ECE09100973C76 /* TestViewController.swift in Sources */,
 				CEFBE67920B2D49100C19832 /* ProblemView.swift in Sources */,
 				CE554C382091AD4F00A3F7A1 /* AppDelegate.swift in Sources */,
 				CE3BCA6E20BF904600E6355B /* Transition.swift in Sources */,
+				CE03E69920EB62A400973C76 /* Extension+Button.swift in Sources */,
 				CEFBE67D20B6E74A00C19832 /* Closure.swift in Sources */,
 				CE3BCA7820C1326F00E6355B /* LuaBridge.mm in Sources */,
 				CE34DA8C20C4E9A40063B771 /* CocosViewController.swift in Sources */,
 				CEB053D52091DD0300455739 /* DateConst.swift in Sources */,
 				628AB50220C414090075381D /* AppDelegate.cpp in Sources */,
+				CE03E6A620ECABD000973C76 /* DebugView.swift in Sources */,
 				CEB053DA2092F6FF00455739 /* ThereIs.swift in Sources */,
 				CEFBE67420AC239700C19832 /* Functional.swift in Sources */,
 				CEB053D02091BB3900455739 /* NOView.swift in Sources */,

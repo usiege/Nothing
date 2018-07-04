@@ -8,6 +8,10 @@
 
 import Foundation
 
+let kScreenWidth: CGFloat = UIScreen.main.bounds.width
+let kScale: CGFloat = kScreenWidth / 1024.0
+let MAXFLOAT = 0x1.fffffep+127
+
 extension Date {
     func customCalendar() -> Calendar {
         var calendar = Calendar(identifier: Calendar.Identifier.gregorian)
@@ -65,6 +69,11 @@ extension String {
         
         return formater.date(from: self)
     }
-    
+}
 
+postfix operator >>
+extension CGFloat {
+    static postfix func >> (value:CGFloat) -> CGFloat {
+        return value * kScale
+    }
 }

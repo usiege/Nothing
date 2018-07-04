@@ -21,8 +21,7 @@ extension ThereisaViewController: UIViewControllerTransitioningDelegate {
 class ThereisaViewController: UIViewController {
     
     public var thereis: ThereIs?
-    
-    
+
     private var dates: [String: NODate] = [
         JUNE_03_2018:.Date(JUNE_03_2018),   //cocos2dx-lua工程添加
         MAY_17_2018:.Date(MAY_17_2018),     //添加了一个圆环进度条
@@ -60,9 +59,6 @@ class ThereisaViewController: UIViewController {
                 self.view.addSubview(circle)
             })
         
-
-        // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
-        // including entities and graphs.
     }
     public lazy var circle: CircleView = {
         let frame = CGRect(x: 100, y: 100, width: 100, height: 100)
@@ -87,7 +83,6 @@ class ThereisaViewController: UIViewController {
     
     func gameScene() {
         if #available(iOS 10.0, *) {
-            
             if let scene = GKScene(fileNamed: "GameScene") {
                 
                 // Get the SKScene from the loaded GKScene
