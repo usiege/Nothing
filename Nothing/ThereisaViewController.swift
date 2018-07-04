@@ -22,6 +22,11 @@ class ThereisaViewController: UIViewController {
     
     public var thereis: ThereIs?
 
+
+
+    let cocos: LuaBridge = LuaBridge.shared()
+    
+
     private var dates: [String: NODate] = [
         JUNE_03_2018:.Date(JUNE_03_2018),   //cocos2dx-lua工程添加
         MAY_17_2018:.Date(MAY_17_2018),     //添加了一个圆环进度条
@@ -31,7 +36,7 @@ class ThereisaViewController: UIViewController {
     var cocosButton: UIButton = {
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: 0, y: 0, width: SCREEN_TIMES, height: SCREEN_TIMES)
-        button.backgroundColor = UIColor.clear
+        button.backgroundColor = UIColor.blue
         button.setTitle("", for: .normal)
         button.addTarget(self, action: #selector(cocosViewController), for: .touchUpInside)
         return button
@@ -39,8 +44,8 @@ class ThereisaViewController: UIViewController {
     
     @objc
     func cocosViewController() {
-        let cocos_vc = CocosViewController()
-        self.present(cocos_vc, animated: true) {
+        let cocosvc = CocosViewController()
+        self.present(cocosvc, animated: true) {
             print(#function)
         }
     }

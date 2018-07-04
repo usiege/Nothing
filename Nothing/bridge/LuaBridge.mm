@@ -8,15 +8,27 @@
 
 #import "LuaBridge.h"
 
+#import <OpenGLES/EAGL.h>
+#import <OpenGLES/ES2/gl.h>
+#import <OpenGLES/ES2/glext.h>
+#import <CoreFoundation/CoreFoundation.h>
+
+#import "platform/ios/CCDirectorCaller-ios.h"
+
 #include "cocos2d.h"
 #include "AppDelegate.h"
 #include "CocosLua.hpp"
 
+using namespace cocos2d;
 
 @interface LuaBridge()
 {
     CocosLua _cocosLua;
-    cocos2d::Application* _app;
+    
+    cocos2d::Application*   _application;
+    cocos2d::Director*      _director;
+    
+    cocos2d::GLView*        _glview;
 }
 @end
 
@@ -32,7 +44,8 @@ static AppDelegate* _cocosDelegate = nil;
         
         //cocos2d initiatial
         _cocosDelegate = new AppDelegate();
-        _app = cocos2d::Application::getInstance();
+        _application = cocos2d::Application::getInstance();
+        _director = cocos2d::Director::getInstance();
     }
     return self;
 }
@@ -47,6 +60,17 @@ static LuaBridge* _bridge = nil;
     return _bridge;
 }
 
+- (void)setupWithEAGLView:(CCEAGLView *)eaglView {
+    
+    GLView* glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void*)eaglView);
+    Director::getInstance()->setOpenGLView(glview);
+    
+    _context = eaglView.context;
+    _glview = glview;
+    
+    self.eaglView = eaglView;
+}
+
 - (void)setupWithFrame:(CGRect)frame {
     
     CCEAGLView* eaglView = [CCEAGLView viewWithFrame:frame
@@ -56,11 +80,10 @@ static LuaBridge* _bridge = nil;
                                           sharegroup:nil
                                        multiSampling:NO
                                      numberOfSamples:0];
-    cocos2d::GLView* glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void*)eaglView);
-    cocos2d::Director::getInstance()->setOpenGLView(glview);
-
-    self.eaglView = eaglView;
+    [self setupWithEAGLView:eaglView];
 }
+
+
 
 - (void)directorPause {
     cocos2d::Director::getInstance()->pause();
@@ -75,15 +98,36 @@ static LuaBridge* _bridge = nil;
 }
 
 - (void)applicationRun {
-    _app->run();
+    
+    _application->run();
+    
+//    [[CCDirectorCaller sharedDirectorCaller] startMainLoop];
+//    cocos2d::Director::getInstance()->restart();
+}
+
+- (void)applicationEnd {
+    
+//    _director->end();
+//    _director->purgeDirectorPublic();
+//    _director->setOpenGLView(nil)
+//    _director->restart();
+//    _director->purgeOpenGLView();
+    
+    [[CCDirectorCaller sharedDirectorCaller] stopMainLoop];
+    [EAGLContext setCurrentContext:nil]; 
+    
+    self.eaglView = nil;
+    
+    _context = nil;
+    _glview = nil;
 }
 
 - (void)applicationDidEnterBackground {
-    _app->applicationDidEnterBackground();
+    _application->applicationDidEnterBackground();
 }
 
 - (void)applicationWillEnterForeground {
-    _app->applicationWillEnterForeground();
+    _application->applicationWillEnterForeground();
 }
 
 //prointer mark
