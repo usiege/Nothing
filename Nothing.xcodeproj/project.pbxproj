@@ -40,7 +40,6 @@
 		628AB54920C4305E0075381D /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB54820C4305E0075381D /* libz.1.dylib */; };
 		628AB54B20C4307F0075381D /* libiconv.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 628AB54A20C4307F0075381D /* libiconv.2.dylib */; };
 		CE03E69920EB62A400973C76 /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E69820EB62A400973C76 /* Extension+Button.swift */; };
-		CE03E6A020EC706A00973C76 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E69F20EC706A00973C76 /* Pattern.swift */; };
 		CE03E6A320ECA70D00973C76 /* DebugViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E6A220ECA70D00973C76 /* DebugViewController.swift */; };
 		CE03E6A620ECABD000973C76 /* DebugView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E6A520ECABD000973C76 /* DebugView.swift */; };
 		CE03E6A820ECE09100973C76 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE03E6A720ECE09100973C76 /* TestViewController.swift */; };
@@ -151,7 +150,6 @@
 		628AB54820C4305E0075381D /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		628AB54A20C4307F0075381D /* libiconv.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.2.dylib; path = ../../../../../usr/lib/libiconv.2.dylib; sourceTree = "<group>"; };
 		CE03E69820EB62A400973C76 /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
-		CE03E69F20EC706A00973C76 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		CE03E6A220ECA70D00973C76 /* DebugViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugViewController.swift; sourceTree = "<group>"; };
 		CE03E6A520ECABD000973C76 /* DebugView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugView.swift; sourceTree = "<group>"; };
 		CE03E6A720ECE09100973C76 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 				CEFBE67C20B6E74A00C19832 /* Closure.swift */,
 				CEFBE67320AC239700C19832 /* Functional.swift */,
 				CE3BCA6D20BF904600E6355B /* Transition.swift */,
-				CE03E69F20EC706A00973C76 /* Pattern.swift */,
 			);
 			path = compontent;
 			sourceTree = "<group>";
@@ -557,7 +554,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE03E6A020EC706A00973C76 /* Pattern.swift in Sources */,
 				CE03E6A320ECA70D00973C76 /* DebugViewController.swift in Sources */,
 				623BA50A20DFC0C50052613D /* GameViewController.swift in Sources */,
 				623BA4F120DFBE380052613D /* Monster.swift in Sources */,
