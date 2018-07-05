@@ -57,6 +57,8 @@
 		CE554C432091AD4F00A3F7A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE554C412091AD4F00A3F7A1 /* Main.storyboard */; };
 		CE554C452091AD5200A3F7A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE554C442091AD5200A3F7A1 /* Assets.xcassets */; };
 		CE554C482091AD5200A3F7A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE554C462091AD5200A3F7A1 /* LaunchScreen.storyboard */; };
+		CE9730FD20EE298F002554C1 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9730FC20EE298F002554C1 /* Factory.swift */; };
+		CE9730FF20EE29FF002554C1 /* ControlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9730FE20EE29FF002554C1 /* ControlFactory.swift */; };
 		CEB053D02091BB3900455739 /* NOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB053CF2091BB3900455739 /* NOView.swift */; };
 		CEB053D52091DD0300455739 /* DateConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB053D42091DD0300455739 /* DateConst.swift */; };
 		CEB053D82091DF2400455739 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB053D72091DF2400455739 /* Extension.swift */; };
@@ -171,6 +173,8 @@
 		CE554C442091AD5200A3F7A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE554C472091AD5200A3F7A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE554C492091AD5200A3F7A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE9730FC20EE298F002554C1 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		CE9730FE20EE29FF002554C1 /* ControlFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlFactory.swift; sourceTree = "<group>"; };
 		CEB053CF2091BB3900455739 /* NOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NOView.swift; sourceTree = "<group>"; };
 		CEB053D42091DD0300455739 /* DateConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConst.swift; sourceTree = "<group>"; };
 		CEB053D72091DF2400455739 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -392,6 +396,7 @@
 				CE34DA8B20C4E9A40063B771 /* CocosViewController.swift */,
 				CE03E6A220ECA70D00973C76 /* DebugViewController.swift */,
 				CE03E6A720ECE09100973C76 /* TestViewController.swift */,
+				CE9730FB20EE297E002554C1 /* Factory */,
 				623BA4EB20DFBD310052613D /* game */,
 				CEFBE67520AC23D500C19832 /* compontent */,
 				CE3BCA6F20BFA68D00E6355B /* profession */,
@@ -405,6 +410,15 @@
 				CE554C492091AD5200A3F7A1 /* Info.plist */,
 			);
 			path = Nothing;
+			sourceTree = "<group>";
+		};
+		CE9730FB20EE297E002554C1 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				CE9730FC20EE298F002554C1 /* Factory.swift */,
+				CE9730FE20EE29FF002554C1 /* ControlFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		CEB053D32091DCDF00455739 /* Const */ = {
@@ -556,6 +570,7 @@
 			files = (
 				CE03E6A320ECA70D00973C76 /* DebugViewController.swift in Sources */,
 				623BA50A20DFC0C50052613D /* GameViewController.swift in Sources */,
+				CE9730FD20EE298F002554C1 /* Factory.swift in Sources */,
 				623BA4F120DFBE380052613D /* Monster.swift in Sources */,
 				CEFBE67720AC2B4400C19832 /* CircleView.swift in Sources */,
 				CE554C3E2091AD4F00A3F7A1 /* GameScene.swift in Sources */,
@@ -573,6 +588,7 @@
 				CE3BCA6E20BF904600E6355B /* Transition.swift in Sources */,
 				CE03E69920EB62A400973C76 /* Extension+Button.swift in Sources */,
 				623BA4EF20DFBE1A0052613D /* MovableObject.swift in Sources */,
+				CE9730FF20EE29FF002554C1 /* ControlFactory.swift in Sources */,
 				CEFBE67D20B6E74A00C19832 /* Closure.swift in Sources */,
 				623BA50420DFBF070052613D /* HealthPack.swift in Sources */,
 				623BA4EA20DD2C890052613D /* LuaObjectCBridgeTest.mm in Sources */,

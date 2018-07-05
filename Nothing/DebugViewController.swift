@@ -80,8 +80,8 @@ extension DebugViewController: UITableViewDelegate {
         
         switch indexPath.row {
         case 0:
-            break
-            return
+            let tv = TestViewController()
+            self.navigationController?.pushViewController(tv, animated: true)
         default:
             break
         }
