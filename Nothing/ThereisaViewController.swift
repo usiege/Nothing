@@ -21,11 +21,8 @@ extension ThereisaViewController: UIViewControllerTransitioningDelegate {
 class ThereisaViewController: UIViewController {
     
     public var thereis: ThereIs?
-
-
-
-    let cocos: LuaBridge = LuaBridge.shared()
     
+    let cocos: LuaBridge = LuaBridge.shared()
 
     private var dates: [String: NODate] = [
         JUNE_03_2018:.Date(JUNE_03_2018),   //cocos2dx-lua工程添加
