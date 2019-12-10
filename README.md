@@ -3,6 +3,32 @@
 <img src='contents/images/nothing_bg.png'>
 </p>
 
+## 2019-12-10
+
+* 游戏派单厅
+```
+Hall {
+    name
+    title
+    homeowner(User) //用户类型
+    category(Category) //房间类型
+    
+}
+```
+* 用户
+```
+User {
+
+}
+```
+
+* 类型
+```
+Category {
+
+}
+```
+
 ## 2018-06-03
   * 添加了cocos2dx-lua配置工程；
   * 可以在swift工程中做lua小游戏了；
@@ -19,4 +45,3 @@
 ## 2018-04-26
   * 第一次添加了一个点击效果；
   * 写了一个函数链的结构；
-
